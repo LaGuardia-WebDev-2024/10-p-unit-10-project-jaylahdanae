@@ -1,13 +1,13 @@
-var starXPos = [];
-var starYPos = [];
-var star = "⭐️";
-var starTotal = 100;
+var dogbXPos = [];
+var dogbYPos = [];
+var dogb = "🦴";
+var DogbTotal = 200;
 
-var planetXPos = [];
-var planetYPos = [];
-var planet = "🪐";
-var planetTotal = 3;
-var planetFound = 0;
+var doggyXPos = [];
+var doggyYPos = [];
+var doggy = "🐶";
+var doggyTotal = 4;
+var doggyFound = 0;
 
 setup = function() {
    size(600, 450); 
@@ -32,11 +32,11 @@ mouseClicked = function(){
 }
 
 var check = function(xClick, yClick){
-  for(var i = 0; i < planetXPos.length; i++){
-    if(dist(xClick - 5, yClick - 5, planetXPos[i], planetYPos[i])<15){
-      planetXPos.splice(i, 1);
-      planetYPos.splice(i, 1);
-      planetFound++;
+  for(var i = 0; i < doggyXPos.length; i++){
+    if(dist(xClick - 5, yClick - 5, doggyXPos[i], doggyYPos[i])<15){
+      doggyXPos.splice(i, 1);
+      doggyYPos.splice(i, 1);
+      doggyFound++;
     }
   }
 }
@@ -47,20 +47,20 @@ var display = function(){
   fill(200,200,0);
   textSize(20);
 
-  for(var i = 0; i < planetXPos.length; i ++){
-    text(planet, planetXPos[i], planetYPos[i]);
+  for(var i = 0; i < doggyXPos.length; i ++){
+    text(doggy, doggyXPos[i], doggyYPos[i]);
   }
 
-  for(var i = 0; i < starXPos.length; i ++){
-    text(star, starXPos[i], starYPos[i]);
+  for(var i = 0; i < dogbXPos.length; i ++){
+    text(dogb, dogbXPos[i], dogbYPos[i]);
   }
 
   fill(0,0,0);
   rect(0,400,600,50);
   fill(255,255,255);
-  text("Find The " + planet + "s   |   " + planet + " " + planetFound + "/" + planetTotal, 0, 425);
+  text("Find The " + doggy + "s   |   " + doggy + " " + doggyFound + "/" + doggyTotal, 0, 425);
 
-  if(planetFound == planetTotal){
+  if(doggyFound == doggyTotal){
     fill(0, 200, 200);
     textSize(50);
     text("Press 'r' to restart \nthe game", 50, 200);
@@ -68,20 +68,20 @@ var display = function(){
 }
 
 var reset = function(){
-  starXPos = [];
-  starYPos = [];
-  planetXPos = [];
-  planetYPos = [];
-  planetFound = 0;
+  dogbXPos = [];
+  dogbYPos = [];
+  doggyXPos = [];
+  doggyYPos = [];
+  doggyFound = 0;
 
 
-  for(var i = 0; i < starTotal; i++){
-    starXPos.push(random(0,600));
-    starYPos.push(random(0,400));
+  for(var i = 0; i < DogbTotal; i++){
+    dogbXPos.push(random(0,600));
+    dogbYPos.push(random(0,400));
   }
 
   for(var i = 0; i < planetTotal; i++){
-    planetXPos.push(random(0,600));
-    planetYPos.push(random(0,400));
+    doggyXPos.push(random(0,600));
+    doggyYPos.push(random(0,400));
   }
 }
