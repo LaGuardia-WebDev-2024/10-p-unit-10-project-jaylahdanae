@@ -94,7 +94,8 @@ var reset = function(){
   doggyFound = 0;
 poodleXPos = [];
 poodleYPos= [];
-
+poodleFound = 0;
+ 
   for(var i = 0; i < DogbTotal; i++){
     dogbXPos.push(random(0,600));
     dogbYPos.push(random(0,400));
