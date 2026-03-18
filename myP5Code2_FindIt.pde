@@ -9,6 +9,12 @@ var doggy = "🐶";
 var doggyTotal = 4;
 var doggyFound = 0;
 
+var poodleXPos = [];
+var poodleXPos = [];
+var poodle = "🐩";
+var poodleTotal = 4;
+var poodleFound = 0;
+
 setup = function() {
    size(600, 450); 
 
@@ -39,6 +45,15 @@ var check = function(xClick, yClick){
       doggyFound++;
     }
   }
+
+
+  for(var i = 0; i < poodleXPos.length; i++){
+    if(dist(xClick - 5, yClick - 5, poodleXPos[i], poodleYPos[i])<15){
+      poodleXPos.splice(i, 1);
+      poodleYPos.splice(i, 1);
+      poodleFound++;
+    }
+  }
 }
 
 var display = function(){
@@ -55,12 +70,16 @@ var display = function(){
     text(dogb, dogbXPos[i], dogbYPos[i]);
   }
 
+for(var i = 0; i < poodleXPos.length; i ++){
+  text(poodle, poodleXPos[i], poodleYPos[i]);
+}
+
   fill(0,0,0);
   rect(0,400,600,50);
   fill(255,255,255);
-  text("Find The " + doggy + "s   |   " + doggy + " " + doggyFound + "/" + doggyTotal, 0, 425);
+  text("Find The " + doggy + "s & The" +  poodle+ "s |   " + doggy + " " + doggyFound + "/" + doggyTotal + poodle + " " + poodleFound + "/" + poodleTotal, 0, 425);
 
-  if(doggyFound == doggyTotal){
+  if(doggyFound == doggyTotal && poodleFound == poodleTotal){
     fill(0, 200, 200);
     textSize(50);
     text("Press 'r' to restart \nthe game", 50, 200);
@@ -73,15 +92,23 @@ var reset = function(){
   doggyXPos = [];
   doggyYPos = [];
   doggyFound = 0;
-
+poodleXPos = [];
+poodleYPos= [];
 
   for(var i = 0; i < DogbTotal; i++){
     dogbXPos.push(random(0,600));
     dogbYPos.push(random(0,400));
   }
 
-  for(var i = 0; i < planetTotal; i++){
+  for(var i = 0; i < doggyTotal; i++){
     doggyXPos.push(random(0,600));
     doggyYPos.push(random(0,400));
   }
+
+for(var i = 0; i < poodleTotal; i++){
+  poodleXPos.push(random(0,600));
+  poodleYPos.push(random(0,400));
 }
+
+}
+
