@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL6kYGPeGm87UW2EIe9mfA4W0YEJX5kEoQNw&s");
+  background-image: url("https://i.pinimg.com/736x/a4/f0/c7/a4f0c71145b19a95ce94ba07ccdf3cdc.jpg");
   background-color: hsla(0, 0%, 93%, 0);
   background-blend-mode: overlay;
   text-align: center;
@@ -22,7 +22,10 @@ html{
   background-repeat: no-repeat;
 }
 
-#myCanvas2 {
+#myCanvas2 { background-image: url("https://i.pinimg.com/736x/a4/f0/c7/a4f0c71145b19a95ce94ba07ccdf3cdc.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px solid black;
   border-radius: 30px;
 }

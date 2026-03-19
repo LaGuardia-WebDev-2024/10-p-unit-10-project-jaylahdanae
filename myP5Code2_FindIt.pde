@@ -1,14 +1,17 @@
+//BONE
 var dogbXPos = [];
 var dogbYPos = [];
 var dogb = "🦴";
 var DogbTotal = 200;
 
+//The Dog
 var doggyXPos = [];
 var doggyYPos = [];
 var doggy = "🐶";
 var doggyTotal = 4;
 var doggyFound = 0;
 
+//Poodle
 var poodleXPos = [];
 var poodleXPos = [];
 var poodle = "🐩";
@@ -57,7 +60,7 @@ var check = function(xClick, yClick){
 }
 
 var display = function(){
-  background(100,100,100);
+  background(100,100,100,0);
 
   fill(200,200,0);
   textSize(20);
