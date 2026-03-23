@@ -33,6 +33,17 @@ draw = function(){
    }
 
   display();
+x = 0;
+while(x < 600){
+  text("🏐", x,20);
+   text("🏐", x,400);
+  x += 60;
+}
+
+
+
+
+
 }
 
 
