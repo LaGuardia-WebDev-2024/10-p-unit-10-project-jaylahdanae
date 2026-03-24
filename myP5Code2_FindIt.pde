@@ -23,7 +23,7 @@ setup = function() {
 
    reset();
 }
-
+var xMove = 1;
 draw = function(){   
 
    if(keyPressed){
@@ -35,11 +35,11 @@ draw = function(){
   display();
 x = 0;
 while(x < 600){
-  text("🏐", x,20);
-   text("🏐", x,400);
+  text("🏐", x+xMove,20);
+   text("🏐", x+xMove,400);
   x += 60;
 }
-
+xMove ++
 
 
 
